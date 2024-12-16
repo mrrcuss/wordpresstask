@@ -22,9 +22,6 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     echo "</Directory>" >> /etc/apache2/apache2.conf
 
 RUN a2enmod rewrite
-EXPOSE 80
+EXPOSE 8080
 WORKDIR /var/www/html/wordpress
 CMD ["apachectl", "-D", "FOREGROUND"]
-
-
-####

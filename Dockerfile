@@ -25,3 +25,6 @@ RUN a2enmod rewrite
 EXPOSE 80
 WORKDIR /var/www/html/wordpress
 CMD ["apachectl", "-D", "FOREGROUND"]
+
+
+####

@@ -19,12 +19,16 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+          protocl: TCP
+        securityContext:
+          privilieged: true
         volumeMounts:
         - name: wordpress-data
           mountPath: /opt/app-root/src
         - name: wp-config-file
           mountPath: /opt/app-root/src/wp-config.php
           subPath: wp-config.php
+      
       volumes:
       - name: wp-config-file
         configMap:

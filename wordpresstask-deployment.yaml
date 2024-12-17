@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wordpress-v2
+  name: wordpresstask
 spec:
   replicas: 1
   selector:
@@ -38,5 +38,5 @@ spec:
             path: wp-config.php
       - name: wordpress-data
         persistentVolumeClaim:
-          claimName: wordpress-v2-pvc
+          claimName: wordpresstask-pvc
 

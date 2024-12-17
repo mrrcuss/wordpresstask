@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wordpress-app
-        image: quay.io/riegerj/henkepress
+        image: 
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
